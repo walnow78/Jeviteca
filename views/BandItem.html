@@ -1,0 +1,21 @@
+<tr>
+    <td>
+        <img ng-src=" {{ band.photo | PatchImage }}" class="img-rounded" alt="Cinque Terre" width="120" height="120" />
+    </td>
+    <td>
+    <a ng-href = "#/band/{{ band.id }}/detail"> {{ band.name }} </a>
+    </td>
+    <td>{{ band.origin }}</td>
+    <td>
+        <p ng-repeat="member in band.members | orderBy : 'name'"> {{ member.name}} </p>
+    </td>
+
+    <td>
+        <span favorite-item id-entity="{{ band.id }}", entity="{{ 'band' }}"></span>
+    </td>
+
+    <td>
+        <span ranking-item id-entity="{{ band.id }}", entity="{{ 'band' }}" ></span>
+    </td>
+
+</tr>

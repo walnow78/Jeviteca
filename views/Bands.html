@@ -1,0 +1,15 @@
+<h4> Bands </h4>
+
+<td><input ng-model="query[queryBy]" placeholder="Search for..." /></td>
+
+<table class="table table-striped">
+    <th>Image</th>
+    <th>Name</th>
+    <th>Origin</th>
+    <th>Members</th>
+    <th>Favorite</th>
+    <th>Ranking</th>
+    <tbody>
+    <tr ng-repeat="band in bands  | filter:query" band-item band="band"></tr>
+    </tbody>
+</table>
